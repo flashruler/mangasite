@@ -1,65 +1,63 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+//import volume1 from '../components/volume1.js';
+import React, { Component } from "react"
+import generateVolume1 from '../components/volume1.js';
+const axios = require('axios');
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+export default class extends Component {
+  state = {
+    series: []
+  }
+  constructor(props) {
+    super(props)
+    this.getData = this.getData.bind(this)
+  }
+  componentDidMount() {
+    this.getData()
+  }
+  getData() {
+    let that = this
+    axios.get('smartphone.json')
+      .then(function (response) {
+        console.log(response.data.volumes[0].chapter1);
+        that.setState({ series: response.data})
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+  }
+  render() {
+    generateVolume1();
+ return(
+  <div className='page'>
+    <div className='header'>
+            <h1>Le Manga Site</h1>
+          </div>
+          {this.state.series && this.state.series.volumes[0].map((value, index) => {
+          if (index < 3) {
+            return (
+              <div className='box' key={index} >
+                <div className='launch'>
+                  <h1>{value.name}</h1>
+                </div>
+              </div>
+            )
+          }
+          else {
+            return (<div key={index} ></div>)
+          }
+        })}
+          </div>
+ );
+  }
+  // getStaticProps(){
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+  // }
 }
