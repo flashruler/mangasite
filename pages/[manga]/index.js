@@ -5,12 +5,13 @@ const VOLUME_LIST =[
         id: 'volume1',
         title:'volume 1',
         image: 'https://images-na.ssl-images-amazon.com/images/I/812W8iTBYZL.jpg',
-        link:'/Volume1'
+        link:'/volume1'
     },
     {
         id: 'volume2',
         title:'volume 2',
-        image: 'https://images-na.ssl-images-amazon.com/images/I/81Y0gcAGlGS.jpg'
+        image: 'https://images-na.ssl-images-amazon.com/images/I/81Y0gcAGlGS.jpg',
+        link:'/volume1'
     }
 ]
 function Isesuma(){
