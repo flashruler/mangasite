@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
-import React, {  useState  } from "react";
-
+import React, { useState } from "react";
 // import Page from '../components/Page';
 
 //import Chapter from '../components/chapter';
@@ -11,23 +10,34 @@ function Chapter(props) {
 
     return (
 
-        <div>
-            {
-            props.chapterImages.map((image, index) => {
-                return (
-                    null) })}
-                    <img src={props.chapterImages[count]}></img>
-                    <button onClick={() => {if(count !=props.chapterImages.length-1){
-                        setCount(count + 1)}}}>
-                        Next
+        <div className='page'>
+            <div className='box'>ß
+                <button onClick={() => {
+                    if (count != 0) {
+                        setCount(count - 1)
+                    }
+                }}>
+                    {'<-'}
                     </button>
-                    <button onClick={() => {if(count !=0){
-                        setCount(count - 1)}}}>
-                        Back
+                <button onClick={() => {
+                    if (count != props.chapterImages.length - 1) {
+                        setCount(count + 1)
+                    }
+                }}>
+                    {'->'}
                     </button>
+            </div>
+            <div className='box'>
+                {
+                    props.chapterImages.map((image, index) => {
+                        return (
+                            null)
+                    })}
+                <img src={props.chapterImages[count]}></img>
+            </div>
 
         </div>
-        
+
     );
 }
 export async function getStaticPaths() {
