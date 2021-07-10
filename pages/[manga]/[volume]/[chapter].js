@@ -17,7 +17,7 @@ function Chapter(props) {
                 return (
                     null) })}
                     <img src={props.chapterImages[count]}></img>
-                    <button onClick={() => {if(count !=32){
+                    <button onClick={() => {if(count !=props.chapterImages.length-1){
                         setCount(count + 1)}}}>
                         Next
                     </button>
