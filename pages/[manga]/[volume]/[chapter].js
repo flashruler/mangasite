@@ -10,29 +10,26 @@ function Chapter(props) {
 
     return (
 
+
         <div className='page'>
-            <div className='box'>ß
+            <div className='box'>
+
                 <button onClick={() => {
                     if (count != 0) {
                         setCount(count - 1)
                     }
                 }}>
                     {'<-'}
-                    </button>
+                </button>
                 <button onClick={() => {
                     if (count != props.chapterImages.length - 1) {
                         setCount(count + 1)
                     }
                 }}>
                     {'->'}
-                    </button>
+                </button>
             </div>
             <div className='box'>
-                {
-                    props.chapterImages.map((image, index) => {
-                        return (
-                            null)
-                    })}
                 <img src={props.chapterImages[count]}></img>
             </div>
 
@@ -47,14 +44,14 @@ export async function getStaticPaths() {
     mangaList = mangaList.mangas
 
     for (let i = 0; i < mangaList.length; i++) {
-        data[mangaList[i]] = await import("../../../public/" + mangaList[i] + ".json");
+        data[mangaList[i].mangaName] = await import("../../../public/" + mangaList[i].mangaName + ".json");
     }
 
     const paths = []
     for (let i = 0; i < mangaList.length; i++) {
-        for (let k = 0; k < data[mangaList].volumes.length; k++) {
-            for (let j = 0; j < data[mangaList].volumes[k].chapters.length; j++) {
-                paths.push("/" + mangaList[i] + "/volume" + data[mangaList[i]].volumes[k].volumeNumber + "/c" + data[mangaList[i]].volumes[k].chapters[j].chapterNumber)
+        for (let k = 0; k < data[mangaList[i].mangaName].volumes.length; k++) {
+            for (let j = 0; j < data[mangaList[i].mangaName].volumes[k].chapters.length; j++) {
+                paths.push("/" + mangaList[i].mangaName + "/volume" + data[mangaList[i].mangaName].volumes[k].volumeNumber + "/c" + data[mangaList[i].mangaName].volumes[k].chapters[j].chapterNumber)
             }
         }
     }
@@ -85,12 +82,12 @@ export async function getStaticProps({ params }) {
             let volumeIndex = -1;
             let chapterImages = []
             for (let i = 0; i < data.length; i++) {
-                if (data[i].volumeNumber = volume) {
+                if (data[i].volumeNumber === volume) {
                     volumeIndex = i;
                 }
             }
             for (let i = 0; i < data[volumeIndex].chapters.length; i++) {
-                if (data[volumeIndex].chapters[i].chapterNumber = c) {
+                if (data[volumeIndex].chapters[i].chapterNumber === c) {
                     chapterImages = data[volumeIndex].chapters[i].images;
                     return { props: { chapterImages: chapterImages } };
                 }
