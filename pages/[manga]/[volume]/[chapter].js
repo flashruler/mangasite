@@ -1,18 +1,28 @@
 import { useRouter } from 'next/router';
 import React, { useState } from "react";
-// import Page from '../components/Page';
 
-//import Chapter from '../components/chapter';
-//manga.com/[name]/[volume]/[chapter]
-//smartphone.volume1.c1
 function Chapter(props) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = React.useState(0)
 
+    React.useEffect(() => {
+        const parsedCount = Number(localStorage.getItem("count") || 0)
+        setCount(parsedCount)
+    }, [])
+
+    React.useEffect(() => {
+        localStorage.setItem("count", count)
+    }, [count])
+if(props.chapterImages){
     return (
-
-
         <div className='page'>
             <div className='box'>
+            <button onClick={() => {
+                    if (count != 0) {
+                        setCount(0)
+                    }
+                }}>
+                    {'Back to Start'}
+                </button>
 
                 <button onClick={() => {
                     if (count != 0) {
@@ -29,13 +39,18 @@ function Chapter(props) {
                     {'->'}
                 </button>
             </div>
-            <div className='box'>
-                <img src={props.chapterImages[count]}></img>
+            {console.log(props.chapterImages)}
+            
+            <div>
+                if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='box'></img>}
+
             </div>
 
         </div>
 
     );
+}
+        return(null)
 }
 export async function getStaticPaths() {
 
@@ -43,12 +58,12 @@ export async function getStaticPaths() {
     let mangaList = await import("../../../public/mangas.json");
     mangaList = mangaList.mangas
 
-    for (let i = 0; i < mangaList.length; i++) {
+    for (let i = 0; i < mangaList[i].length; i++) {
         data[mangaList[i].mangaName] = await import("../../../public/" + mangaList[i].mangaName + ".json");
     }
 
     const paths = []
-    for (let i = 0; i < mangaList.length; i++) {
+    for (let i = 0; i < mangaList[i].length; i++) {
         for (let k = 0; k < data[mangaList[i].mangaName].volumes.length; k++) {
             for (let j = 0; j < data[mangaList[i].mangaName].volumes[k].chapters.length; j++) {
                 paths.push("/" + mangaList[i].mangaName + "/volume" + data[mangaList[i].mangaName].volumes[k].volumeNumber + "/c" + data[mangaList[i].mangaName].volumes[k].chapters[j].chapterNumber)
@@ -56,19 +71,11 @@ export async function getStaticPaths() {
         }
     }
 
-    console.log("test")
-
 
     return { paths: paths, fallback: true }
 }
 
 export async function getStaticProps({ params }) {
-    // const router = useRouter();
-    // const c = router.query.chapter;
-    // const volume = router.query.volume;
-    // const manga = router.query.manga;
-    // console.log(router.query);
-    // console.log(manga);
 
     let c = params.chapter;
     let volume = params.volume;

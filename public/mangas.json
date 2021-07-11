@@ -2,6 +2,10 @@
     "mangas":[{
         "mangaName": "Isesuma",
         "mangaCover":"https://images-na.ssl-images-amazon.com/images/I/812W8iTBYZL.jpg"
+    },
+    {
+        "mangaName": "DemonSlayer",
+        "mangaCover":"https://images-na.ssl-images-amazon.com/images/I/81ZNkhqRvVL.jpg"
     }
         
     ]

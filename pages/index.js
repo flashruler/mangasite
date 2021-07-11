@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 function HomePage(props) {
     return (
-<Fragment>
-        <ul>
+<div className='page'>
+        <ul className='box'>
             {props.mangaList.map(manga=>
-            <li key={manga.mangaName}><Link href={"/"+manga.mangaName}><span><img src={manga.mangaCover}></img></span></Link></li>)}
+            <li key={manga.mangaName}><Link href={"/"+manga.mangaName}><span><img src={manga.mangaCover} class='image1'></img></span></Link></li>)}
         </ul>
-    </Fragment>
+    </div>
     );
 
 }
