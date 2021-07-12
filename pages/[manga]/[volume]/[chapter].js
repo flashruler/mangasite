@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from "react";
+import Link from 'next/link';
 
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
@@ -12,45 +13,47 @@ function Chapter(props) {
     React.useEffect(() => {
         localStorage.setItem("count", count)
     }, [count])
-if(props.chapterImages){
-    return (
-        <div className='page'>
-            <div className='box'>
-            <button onClick={() => {
-                    if (count != 0) {
-                        setCount(0)
-                    }
-                }}>
-                    {'Back to Start'}
-                </button>
+    if (props.chapterImages) {
+        return (
+            <div className='page'>
 
-                <button onClick={() => {
-                    if (count != 0) {
-                        setCount(count - 1)
-                    }
-                }}>
-                    {'<-'}
-                </button>
-                <button onClick={() => {
-                    if (count != props.chapterImages.length - 1) {
-                        setCount(count + 1)
-                    }
-                }}>
-                    {'->'}
-                </button>
+                {console.log(props.chapterImages)}
+
+                <div>
+                    if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='box'></img>}
+
+
+
+                </div>
+                <div className='box'>
+                    <button onClick={() => {
+                        if (count != 0) {
+                            setCount(0)
+                        }
+                    }}>
+                        {'Back to Start'}
+                    </button>
+
+                    <button onClick={() => {
+                        if (count != 0) {
+                            setCount(count - 1)
+                        }
+                    }}>
+                        {'<-'}
+                    </button>
+                    <button onClick={() => {
+                        if (count != props.chapterImages.length - 1) {
+                            setCount(count + 1)
+                        }
+                    }}>
+                        {'->'}
+                    </button>
+                </div>
             </div>
-            {console.log(props.chapterImages)}
-            
-            <div>
-                if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='box'></img>}
 
-            </div>
-
-        </div>
-
-    );
-}
-        return(null)
+        );
+    }
+    return (null)
 }
 export async function getStaticPaths() {
 
@@ -96,7 +99,13 @@ export async function getStaticProps({ params }) {
             for (let i = 0; i < data[volumeIndex].chapters.length; i++) {
                 if (data[volumeIndex].chapters[i].chapterNumber === c) {
                     chapterImages = data[volumeIndex].chapters[i].images;
-                    return { props: { chapterImages: chapterImages } };
+                    return {
+                        props: {
+                            chapterImages: chapterImages,
+                            volumeNumber: volumeIndex,
+                            manga: manga
+                        }
+                    };
                 }
             }
         }

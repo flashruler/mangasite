@@ -5,7 +5,10 @@ function HomePage(props) {
 <div className='page'>
         <ul className='box'>
             {props.mangaList.map(manga=>
-            <li key={manga.mangaName}><Link href={"/"+manga.mangaName}><span><img src={manga.mangaCover} class='image1'></img></span></Link></li>)}
+            <li key={manga.mangaName}>
+                <Link href={"/"+manga.mangaName}><span><img src={manga.mangaCover} class='image1'></img></span></Link>
+                <div className='info'>{manga.description}</div>
+                </li>)}
         </ul>
     </div>
     );
