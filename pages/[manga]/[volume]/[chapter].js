@@ -16,16 +16,11 @@ function Chapter(props) {
     if (props.chapterImages) {
         return (
             <div className='page'>
-
-                {console.log(props.chapterImages)}
-
                 <div>
                     if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='box'></img>}
-
-
-
                 </div>
-                <div className='box'>
+                {/* Buttons for page changes */}
+                <div className='box'> 
                     <button onClick={() => {
                         if (count != 0) {
                             setCount(0)
@@ -33,7 +28,6 @@ function Chapter(props) {
                     }}>
                         {'Back to Start'}
                     </button>
-
                     <button onClick={() => {
                         if (count != 0) {
                             setCount(count - 1)

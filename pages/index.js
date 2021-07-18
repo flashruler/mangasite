@@ -3,6 +3,9 @@ import { Fragment } from 'react';
 function HomePage(props) {
     return (
 <div className='page'>
+    <div className='box'>
+        <h1>Featured Manga</h1>
+    </div>
         <ul className='box'>
             {props.mangaList.map(manga=>
             <li key={manga.mangaName}>
