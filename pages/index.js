@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { Fragment, PureComponent } from 'react';
 import React, { Component } from 'react';
-import Header from './components/header';
+import Header from '../components/Header';
 function HomePage(props) {
     return (
+        
         <div className='page'>
-            <header /> 
+<Header/>
             <div className='box'>
                 <div className='title'>
                     <h1>Featured Manga</h1>
@@ -15,7 +16,7 @@ function HomePage(props) {
 
                         {props.mangaList.map(manga =>
                             <li key={manga.mangaName}>
-                                <Link href={"/" + manga.mangaName}><span><img src={manga.mangaCover} class='image1'></img></span></Link>
+                                <Link href={"/" + manga.mangaName}><span><img src={manga.mangaCover} className='image1'></img></span></Link>
                             </li>)}
                     </ul>
                 </Fragment>

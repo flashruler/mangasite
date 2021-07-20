@@ -8,7 +8,7 @@ function Manga(props) {
             {/* List of Volumes */}
             <ul className='container'>
                 {props.volumeList.map(volume =>
-                    <li key={volume.volumeNumber}><Link href={"/" + props.manga + "/volume" + volume.volumeNumber}><span><img src={volume.imageCover} class='image1'></img></span></Link></li>)}
+                    <li key={volume.volumeNumber}><Link href={"/" + props.manga + "/volume" + volume.volumeNumber}><span><img src={volume.imageCover} className='image1'></img></span></Link></li>)}
             </ul>
         </Fragment>
 

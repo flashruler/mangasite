@@ -1,16 +1,19 @@
 .containerHeader{
-display: flex;
 flex-flow: row wrap;
 justify-content: flex-start;
-position: absolute;
-width: 1920px;
-height: 177px;
-background: #dbdbdb;
+width: 100vw;
+height: 144px;
+background: #a51313;
 }
 .titleHeader{
-    padding: 0;
-    margin: 0;
     font-family:'Montserrat',sans-serif;
     color:#FFFFFF;
     line-height: 59px;
 }
+.headerTitle
+{
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 88px;
+}
+

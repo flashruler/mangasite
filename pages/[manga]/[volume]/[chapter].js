@@ -16,7 +16,12 @@ function Chapter(props) {
     if (props.chapterImages) {
         return (
             <div className='page'>
-                <div className='sidebar'> 
+{console.log(props)}
+                <div>
+                    if(props.chapterImages){<img src={props.chapterImages[count]} className='image2' className='box'></img>}
+                </div>
+                {/* Buttons for page changes */}
+                <div className='container'>
                     <a className='button3' onClick={() => {
                         if (count != 0) {
                             setCount(0)
@@ -24,26 +29,24 @@ function Chapter(props) {
                     }}>
                         {'Back to Start'}
                     </a>
-                    <button onClick={() => {
+                    <a className='button3' onClick={() => {
                         if (count != 0) {
                             setCount(count - 1)
                         }
                     }}>
                         {'<-'}
-                    </button>
-                    <button onClick={() => {
+                    </a>
+                    <a className='button3' onClick={() => {
                         if (count != props.chapterImages.length - 1) {
                             setCount(count + 1)
                         }
                     }}>
                         {'->'}
-                    </button>
-                </div>
-                <div>
-                    if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='box'></img>}
-                </div>
-                {/* Buttons for page changes */}
+                    </a>
 
+                        <Link href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</Link>
+
+                </div>
             </div>
 
         );
@@ -89,6 +92,7 @@ export async function getStaticProps({ params }) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].volumeNumber === volume) {
                     volumeIndex = i;
+                    console.log(volumeIndex)
                 }
             }
             for (let i = 0; i < data[volumeIndex].chapters.length; i++) {
