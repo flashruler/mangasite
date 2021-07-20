@@ -1,16 +1,17 @@
-import VolumeList from '../components/VolumeList';
 import { Fragment } from 'react';
 import Link from 'next/link';
 
 function Manga(props) {
-    return <div className='page'>
+    return <div className='page'>      
         <Fragment>
             <h1>{props.manga}</h1>
-            <ul className='box'>
+            {/* List of Volumes */}
+            <ul className='container'>
                 {props.volumeList.map(volume =>
                     <li key={volume.volumeNumber}><Link href={"/" + props.manga + "/volume" + volume.volumeNumber}><span><img src={volume.imageCover} class='image1'></img></span></Link></li>)}
             </ul>
         </Fragment>
+
     </div>
 }
 export async function getStaticPaths() {

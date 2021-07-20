@@ -16,14 +16,14 @@ function Chapter(props) {
     if (props.chapterImages) {
         return (
             <div className='page'>
-                                <div className='sidebar'> 
-                    <button onClick={() => {
+                <div className='sidebar'> 
+                    <a className='button3' onClick={() => {
                         if (count != 0) {
                             setCount(0)
                         }
                     }}>
                         {'Back to Start'}
-                    </button>
+                    </a>
                     <button onClick={() => {
                         if (count != 0) {
                             setCount(count - 1)

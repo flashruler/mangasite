@@ -286,6 +286,77 @@
                     ]
                 }
             ]
+        },
+        {
+            "volumeNumber": 11,
+            "cover":"https://i.ibb.co/LdsjQLZ/21-07-Issue.jpg",
+            "chapters": [
+                {
+                    "chapterNumber": 54,
+                    "images" : [
+                        "https://i.ibb.co/pQZG7tx/1.jpg",
+                        "https://i.ibb.co/thGydzs/2.jpg",
+                        "https://i.ibb.co/N9wL7qg/3.jpg",
+                        "https://i.ibb.co/Lz530hT/4.jpg",
+                        "https://i.ibb.co/7kNHdWb/5.jpg",
+                        "https://i.ibb.co/x792RPq/6.jpg",
+                        "https://i.ibb.co/yR1CcCs/7.jpg",
+                        "https://i.ibb.co/mJgXpVz/8.jpg",
+                        "https://i.ibb.co/4Sj4WhT/9.jpg",
+                        "https://i.ibb.co/pQ0zV1p/10.jpg",
+                        "https://i.ibb.co/CtXTvRN/11.jpg",
+                        "https://i.ibb.co/SBM0qXF/12.jpg",
+                        "https://i.ibb.co/Rp2HGrj/13.jpg",
+                        "https://i.ibb.co/kKCbmh5/14.jpg"
+                    ]
+                },
+                {
+                    "chapterNumber": 55,
+                    "images" : [
+                        "https://i.ibb.co/rkKn0gH/1.jpg",
+                        "https://i.ibb.co/sRdgVfQ/2.jpg",
+                        "https://i.ibb.co/YDjcrxT/3.jpg",
+                        "https://i.ibb.co/RTD7SNC/4.jpg",
+                        "https://i.ibb.co/whxn0PT/5.jpg",
+                        "https://i.ibb.co/HYTF6sN/6.jpg",
+                        "https://i.ibb.co/phDJrXN/7.jpg",
+                        "https://i.ibb.co/qDM9dtd/8.jpg",
+                        "https://i.ibb.co/6YKGD9z/9.jpg",
+                        "https://i.ibb.co/tY1DdKy/10.jpg",
+                        "https://i.ibb.co/VJMysgZ/11.jpg",
+                        "https://i.ibb.co/MZbvv0X/12.jpg",
+                        "https://i.ibb.co/Zz6p212/13.jpg",
+                        "https://i.ibb.co/ww9Ggk4/14.jpg",
+                        "https://i.ibb.co/NZc1KPt/15.jpg"
+                    ]
+                },
+                {
+                    "chapterNumber": 56,
+                    "images" : [
+                        "https://i.ibb.co/cQ5xSBY/01.jpg",
+                        "https://i.ibb.co/rdvKSXC/02.jpg",
+                        "https://i.ibb.co/w0L9ZYr/03.jpg",
+                        "https://i.ibb.co/SXnPr8x/04.jpg",
+                        "https://i.ibb.co/Sfmc4Cg/05.jpg",
+                        "https://i.ibb.co/MsG0Jdc/6.jpg",
+                        "https://i.ibb.co/GWWb1cg/7.jpg",
+                        "https://i.ibb.co/gJRfX2V/8.jpg",
+                        "https://i.ibb.co/4FnmP5S/9.jpg",
+                        "https://i.ibb.co/bb54LcM/10.jpg",
+                        "https://i.ibb.co/pLWK59s/11.jpg",
+                        "https://i.ibb.co/gVwwDy9/12.jpg",
+                        "https://i.ibb.co/8NcGcgW/13.jpg",
+                        "https://i.ibb.co/M8N4cTF/14.jpg",
+                        "https://i.ibb.co/0YGTNnH/15.jpg",
+                        "https://i.ibb.co/gr2MF95/16.jpg",
+                        "https://i.ibb.co/7y9Nj16/17.jpg",
+                        "https://i.ibb.co/sPxKCbB/18.jpg",
+                        "https://i.ibb.co/L5WGj6r/19.jpg",
+                        "https://i.ibb.co/vkd9PVc/20.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
+
