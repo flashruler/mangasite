@@ -2,18 +2,8 @@
     "mangas":[{
         "mangaName": "Isesuma",
         "mangaCover":"https://images-na.ssl-images-amazon.com/images/I/812W8iTBYZL.jpg",
+        "banner":"https://i.ibb.co/3kBw2Mz/isesumabanner.png",
         "description": "This is the worst anime"
-    },
-    {
-        "mangaName": "DemonSlayer",
-        "mangaCover":"https://images-na.ssl-images-amazon.com/images/I/81ZNkhqRvVL.jpg",
-        "description": "This is a pretty good anime"
-    },
-    {
-        "mangaName": "Tonikawa",
-        "mangaCover":"https://images-na.ssl-images-amazon.com/images/I/81Rowze1WWL._AC_SL1500_.jpg",
-        "description": "This is a wholesome anime"
-    }
-        
+    }   
     ]
 }

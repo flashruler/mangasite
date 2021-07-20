@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  background-color:rgb(32, 33, 41);
 }
 
 /* Classes */
@@ -18,7 +19,7 @@ cursor: pointer;
 }
 .image2
 {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
   border-radius: 10px;
 margin-bottom:40px;
@@ -42,16 +43,7 @@ margin-right: auto;
   width: 100vw;
   align-items: center;
 }
-.box{
-  display: flex;
-  max-width: 800px;
-  justify-content: center;
-  align-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom:auto;
 
-}
 .chapterBox{
   display: flex;
   max-width: 800px;
@@ -89,7 +81,8 @@ margin-right: auto;
 
 .box{
 display: flex;
-flex-flow: row wrap;
+flex-flow: column;
+list-style: none;
 justify-content: flex-start;
 }
 .container {
@@ -112,7 +105,8 @@ justify-content: flex-start;
   display: flex;
   flex-flow: row;
   padding: 0;
-  margin: 0;
+  margin-right: 20px;
+margin-left: 20px;
   list-style: none;
   justify-content:flex-start;
   font-family:'Montserrat',sans-serif;
@@ -120,51 +114,28 @@ justify-content: flex-start;
   position: static;
   line-height: 59px;
 }
-
-.container:hover .item {
-  transform: translateX(-25%);
+.box2{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  }
+.title2 {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  margin-right: 20px;
+margin-left: 20px;
+  list-style: none;
+  justify-content:center;
+  font-family:'Montserrat',sans-serif;
+  color:#FFFFFF;
+  position: static;
+  line-height: 59px;
 }
-
-.item {
-  background: green;
-  flex: 0 0 19.7%;
-  text-align: center;
-  margin: 0 2px;
-  transition: transform 300ms ease 100ms;
+.bannerImage{
+  width: 100%;
+  height: auto;
 }
-
-
-.item:hover ~ .item {
-  transform: translateX(25%);
-}
-
-.item:hover {
-  transform: scale(1.5) !important;
-}
-
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
-.sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 85; /* 0 width - change this with JavaScript */
-  position: sticky; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-}
-
 
 
 

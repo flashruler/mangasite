@@ -13,7 +13,7 @@ function HomePage(props) {
                 </div>
                 <Fragment>
                     <ul className='containerManga'>
-
+{console.log(props.mangaList)}
                         {props.mangaList.map(manga =>
                             <li key={manga.mangaName}>
                                 <Link href={"/" + manga.mangaName}><span><img src={manga.mangaCover} className='image1'></img></span></Link>
@@ -21,6 +21,7 @@ function HomePage(props) {
                     </ul>
                 </Fragment>
             </div>
+
 
 
         </div>

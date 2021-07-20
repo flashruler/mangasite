@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
+import Header from '../../components/Header';
 
 function Manga(props) {
-    return <div className='page'>      
+    return <div className='page'>
+        <Header/>      
         <Fragment>
             <h1>{props.manga}</h1>
             {/* List of Volumes */}
@@ -11,6 +13,9 @@ function Manga(props) {
                     <li key={volume.volumeNumber}><Link href={"/" + props.manga + "/volume" + volume.volumeNumber}><span><img src={volume.imageCover} className='image1'></img></span></Link></li>)}
             </ul>
         </Fragment>
+        <div className='container'>
+            <h1 className='title'>Join our Discord</h1>
+        </div>
 
     </div>
 }

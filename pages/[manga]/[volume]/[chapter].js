@@ -16,11 +16,11 @@ function Chapter(props) {
     if (props.chapterImages) {
         return (
             <div className='page'>
-{console.log(props)}
                 <div>
-                    if(props.chapterImages){<img src={props.chapterImages[count]} className='image2' className='box'></img>}
+                    if(props.chapterImages){<img src={props.chapterImages[count]} className='image2' className='container'></img>}
                 </div>
                 {/* Buttons for page changes */}
+                {/* I need to change this to links somehow to stop page refreshes */}
                 <div className='container'>
                     <a className='button3' onClick={() => {
                         if (count != 0) {
@@ -44,7 +44,7 @@ function Chapter(props) {
                         {'->'}
                     </a>
 
-                        <Link href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</Link>
+                        <a href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</a>
 
                 </div>
             </div>
@@ -92,7 +92,6 @@ export async function getStaticProps({ params }) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].volumeNumber === volume) {
                     volumeIndex = i;
-                    console.log(volumeIndex)
                 }
             }
             for (let i = 0; i < data[volumeIndex].chapters.length; i++) {
@@ -101,7 +100,7 @@ export async function getStaticProps({ params }) {
                     return {
                         props: {
                             chapterImages: chapterImages,
-                            volumeNumber: volumeIndex,
+                            volumeNumber: volume,
                             manga: manga
                         }
                     };
