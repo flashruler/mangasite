@@ -18,28 +18,18 @@
 {
     margin-top:10px;
     font-weight: 300;
-    font-size: 72px;
+    font-size: 50px;
     line-height: 30px;
+    text-transform:uppercase;
     text-decoration:none;
     color:#FFFFFF;
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-
-
 }
-
-.site-navigation ul, 
-.site-navigation li {
-  margin: 0; 
-  padding: 0;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-.site-navigation li {
-  display: inline-block;
-  margin: 1.4em 10px 10px 1em;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+.links{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    height:100%;
 }

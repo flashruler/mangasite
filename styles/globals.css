@@ -32,10 +32,11 @@ margin-right: auto;
 .page {
   background-color:rgb(32, 33, 41);
   background-repeat: repeat-y;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   align-items: center;
   flex-wrap: wrap;
+  min-height:100vh;
 }
 .page2 {
   background-color:rgb(32, 33, 41);
