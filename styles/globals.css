@@ -84,8 +84,6 @@ display: flex;
 flex-flow: column;
 list-style: none;
 justify-content: flex-start;
-margin: auto;
-/* align-items: center; */
 }
 .container {
   display: flex;
@@ -137,26 +135,6 @@ margin-left: 20px;
 .bannerImage{
   width: 100%;
   height: auto;
-}
-.text{
-  font-family:'Montserrat',sans-serif;
-  color:#FFFFFF;
-  position: static;
-  font-size: 20pt;
-  line-height: 59px;
-  text-align: center;
-  padding: 20px;
-}
-.title3 {
-  padding: 0;
-  margin-right: 20px;
-margin-left: 20px;
-  list-style: none;
-  justify-content:center;
-  font-family:'Montserrat',sans-serif;
-  color:#6aa9e4;
-  position: static;
-  line-height: 59px;
 }
 
 
