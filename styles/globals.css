@@ -1,4 +1,7 @@
-@import url(//db.onlinewebfonts.com/c/1370e0e555190f0bce777e9aaf52ee74?family=DINSchrift);;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(//db.onlinewebfonts.com/c/1370e0e555190f0bce777e9aaf52ee74?family=DINSchrift);
 
 * {
   box-sizing: border-box;
@@ -19,8 +22,8 @@ cursor: pointer;
 }
 .image2
 {
-  max-width: 75%;
-  height: auto;
+  max-width: auto;
+  height: 100%;
   border-radius: 10px;
 margin-bottom:40px;
 margin-top:40px;
@@ -86,6 +89,8 @@ list-style: none;
 justify-content: flex-start;
 }
 .container {
+  max-width: auto;
+  height: 100%;
   display: flex;
   flex-flow: row wrap;
   padding: 0;
@@ -102,17 +107,9 @@ justify-content: flex-start;
   justify-content:flex-start;
 }
 .title {
-  display: flex;
-  flex-flow: row;
-  padding: 0;
-  margin-right: 20px;
-margin-left: 20px;
-  list-style: none;
-  justify-content:flex-start;
   font-family:'Montserrat',sans-serif;
   color:#FFFFFF;
-  position: static;
-  line-height: 59px;
+
 }
 .box2{
   display: flex;
