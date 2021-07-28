@@ -5,15 +5,15 @@ import Header from '../../components/Header';
 function Manga(props) {
     return <div>
         <Header />
+        <div className="max-h-40"><img src={props.banner} className="max-h-40"></img></div>
         <Fragment>
-
             <div className="flex flex-row items-start mx-1 my-6 rounded-3xl"><img src={props.volumeList[0].imageCover} className="self-end max-h-96 w-auto rounded-2xl"></img>
                 <div className="flex-box bg-transparent self-end bg-gray-700 my-3">
                     <h1 className="text-6xl my-2 text-white bg-transparent font-light">{props.manga}</h1>
                     <h4 className="3xl text-white bg-transparent mx-2 font-light">{props.description}</h4>
                     <ul className=" flex flex-row ">
-                        if(props.amazon){<li><Link href={props.amazon}><span><h3 className="3xl text-white bg-transparent mx-1 font-light bg-blue-300">Amazon</h3></span></Link></li>}
-                        if(props.bookwalker){<li><Link href={props.bookwalker}><span><h3 className="3xl text-white bg-transparent mx-1 font-light bg-blue-300">Bookwalker</h3></span></Link></li>}
+                        <li className="bg-blue-400 rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.amazon}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Amazon  </h3></span></Link></li>
+                        <li className="bg-blue-400 rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.bookwalker}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Bookwalker  </h3></span></Link></li>
                     </ul>
                 </div>
             </div>
@@ -59,6 +59,7 @@ export async function getStaticProps({ params }) {
         let description = "test"
         let amazon = ""
         let bookwalker = ""
+        let banner=""
         console.log(mangaList[0].mangaName)
         for (let x = 0; x < mangaList.length; x++) {
             console.log(mangaList[x].mangaName)
@@ -66,7 +67,7 @@ export async function getStaticProps({ params }) {
                 description = mangaList[x].description
                 amazon = mangaList[x].amazon
                 bookwalker = mangaList[x].bookwalker
-                console.log(amazon)
+                banner = mangaList[x].banner
             }
         }
         data = data.volumes
@@ -85,7 +86,8 @@ export async function getStaticProps({ params }) {
                     manga: manga,
                     description: description,
                     amazon: amazon,
-                    bookwalker: bookwalker
+                    bookwalker: bookwalker,
+                    banner:banner
                 }
             };
         }
