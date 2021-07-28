@@ -17,7 +17,7 @@ function Chapter(props) {
         return (
             <div className='page'>
                 <div>
-                    if(props.chapterImages){<img src={props.chapterImages[count]} className='image2' className='container'></img>}
+                    if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='container'></img>}
                 </div>
                 {/* Buttons for page changes */}
                 {/* I need to change this to links somehow to stop page refreshes */}
