@@ -5,7 +5,6 @@ import Header from '../../components/Header';
 function Manga(props) {
     return <div>
         <Header />
-        <div className="max-h-40"><img src={props.banner} className="max-h-40"></img></div>
         <Fragment>
             <div className="flex flex-row items-start mx-1 my-6 rounded-3xl"><img src={props.volumeList[0].imageCover} className="self-end max-h-96 w-auto rounded-2xl"></img>
                 <div className="flex-box bg-transparent self-end bg-gray-700 my-3">
