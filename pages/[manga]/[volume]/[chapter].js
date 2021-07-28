@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useState } from "react";
 import Link from 'next/link';
+import Header from '../../../components/Header';
 
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
@@ -15,38 +16,46 @@ function Chapter(props) {
     }, [count])
     if (props.chapterImages) {
         return (
-            <div className='page'>
-                <div>
-                    if(props.chapterImages){<img src={props.chapterImages[count]} class='image2' className='container'></img>}
+            <div>
+                        <Header />
+                        <div className="flex flex-row">
+                            <div className="flex flex-col">
+                                <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 2xl text-white font-light no-underline align-middle" onClick={() => {
+                                    if (count != 0) {
+                                        setCount(0)
+                                    }
+                                }}>
+                                    {'Back to Start'}
+                                </a>
+                                <a className='button3' onClick={() => {
+                                    if (count != 0) {
+                                        setCount(count - 1)
+                                    }
+                                }}>
+                                    {'<-'}
+                                </a>
+                                <a className='button3' onClick={() => {
+                                    if (count != props.chapterImages.length - 1) {
+                                        setCount(count + 1)
+                                    }
+                                }}>
+                                    {'->'}
+                                </a>
+
+                                    <a href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</a>
+
+                            </div>
+                            <div>
+                            if(props.chapterImages){<img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer" onClick={() => {
+                                    if (count != props.chapterImages.length - 1) {
+                                        setCount(count + 1)
+                                    }
+                                }}></img>}
+                            </div>
                 </div>
                 {/* Buttons for page changes */}
                 {/* I need to change this to links somehow to stop page refreshes */}
-                <div className='container'>
-                    <a className='button3' onClick={() => {
-                        if (count != 0) {
-                            setCount(0)
-                        }
-                    }}>
-                        {'Back to Start'}
-                    </a>
-                    <a className='button3' onClick={() => {
-                        if (count != 0) {
-                            setCount(count - 1)
-                        }
-                    }}>
-                        {'<-'}
-                    </a>
-                    <a className='button3' onClick={() => {
-                        if (count != props.chapterImages.length - 1) {
-                            setCount(count + 1)
-                        }
-                    }}>
-                        {'->'}
-                    </a>
-
-                        <a href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</a>
-
-                </div>
+                
             </div>
 
         );

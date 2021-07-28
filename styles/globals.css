@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(//db.onlinewebfonts.com/c/1370e0e555190f0bce777e9aaf52ee74?family=DINSchrift);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap%27');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 * {
-  box-sizing: border-box;
   background-color:rgb(32, 33, 41);
 }
 
