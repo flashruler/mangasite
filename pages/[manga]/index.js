@@ -9,7 +9,7 @@ function Manga(props) {
             <div className="flex flex-row items-start mx-1 my-6 rounded-3xl"><img src={props.volumeList[0].imageCover} className="self-end max-h-96 w-auto"></img>
                 <div className="flex-box self-end bg-isesuma-darkpurple">
                     <h1 className="text-6xl my-2 text-white bg-transparent font-extralight mx-4 uppercase">{props.manga}</h1>
-                    <h4 className="text-lg text-white bg-transparent mx-4 font-light">{props.description}</h4>
+                    <h4 className="text-lg text-white bg-transparent mx-4 font-light sm:text-sm">{props.description}</h4>
                     <ul className=" flex flex-row bg-transparent ">
                         <li className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.amazon}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Amazon  </h3></span></Link></li>
                         <li className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.bookwalker}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Bookwalker  </h3></span></Link></li>
