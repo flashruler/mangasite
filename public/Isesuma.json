@@ -340,6 +340,7 @@
             "chapters": [
                 {
                     "chapterNumber": 54,
+                    "chapterCover":"https://i.imgur.com/AtQZf04.png",
                     "images" : [
                         "https://i.imgur.com/WJvWNn4.jpeg",
                         "https://i.imgur.com/B1oCE1T.jpeg",
@@ -359,6 +360,7 @@
                 },
                 {
                     "chapterNumber": 55,
+                    "chapterCover":"https://i.imgur.com/w5kBnYc.png",
                     "images" : [
                         "https://i.ibb.co/rkKn0gH/1.jpg",
                         "https://i.ibb.co/sRdgVfQ/2.jpg",
@@ -379,6 +381,7 @@
                 },
                 {
                     "chapterNumber": 56,
+                    "chapterCover":"https://i.imgur.com/RkK5Mq1.png",
                     "images" : [
                         "https://i.ibb.co/cQ5xSBY/01.jpg",
                         "https://i.ibb.co/rdvKSXC/02.jpg",
