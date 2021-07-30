@@ -23,7 +23,7 @@ function Manga(props) {
                     {props.volumeList && props.volumeList.map(volume =>
                         <li key={volume.volumeNumber}><Link href={"/" + props.manga + "/volume" + volume.volumeNumber}>
                             <span>
-                                <img src={volume.imageCover} className="max-h-96 w-auto rounded-2xl p-0 object-contain lg:mx-auto">
+                                <img src={volume.imageCover} className="max-h-96 w-auto rounded-2xl p-0 object-contain lg:mx-auto transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">
                                 </img>
                             </span></Link></li>)}
                 </ul>

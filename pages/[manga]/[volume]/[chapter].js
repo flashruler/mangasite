@@ -17,45 +17,49 @@ function Chapter(props) {
     if (props.chapterImages) {
         return (
             <div>
-                        <Header />
-                        <div className="flex flex-row">
-                            <div className="flex flex-col">
-                                <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 2xl text-white font-light no-underline align-middle" onClick={() => {
-                                    if (count != 0) {
-                                        setCount(0)
-                                    }
-                                }}>
-                                    {'Back to Start'}
-                                </a>
-                                <a className='button3' onClick={() => {
-                                    if (count != 0) {
-                                        setCount(count - 1)
-                                    }
-                                }}>
-                                    {'<-'}
-                                </a>
-                                <a className='button3' onClick={() => {
-                                    if (count != props.chapterImages.length - 1) {
-                                        setCount(count + 1)
-                                    }
-                                }}>
-                                    {'->'}
-                                </a>
+                <Header />
+                <div className="flex flex-col">
+                    <div className="flex justify-center">
+                        <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer" onClick={() => {
+                            if (count != props.chapterImages.length - 1) {
+                                setCount(count + 1)
+                            }
+                        }}></img>
+                    </div>
+                    <div className="flex flex-row justify-center my-3">
+                        <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 2xl text-white font-light no-underline align-middle self-center" onClick={() => {
+                            if (count != 0) {
+                                setCount(0)
+                            }
+                        }}>
+                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > Back to Start</h1>
+                        </a>
+                        <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 self-center 2xl text-white font-light no-underline align-middle" onClick={() => {
+                            if (count != 0) {
+                                setCount(count - 1)
+                            }
+                        }}>
+                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"<---"}</h1>
+                        </a>
+                        <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 self-center 2xl text-white font-light no-underline align-middle " onClick={() => {
+                            if (count != props.chapterImages.length - 1) {
+                                setCount(count + 1)
+                            }
+                        }}>
+                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"--->"}</h1>
+                        </a>
+                        <a >
+                            <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle">
+                                <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3"> Return</h1>
+                            </span></Link>
+                        </a>
 
-                                    <a href={"/"+props.manga+"/volume"+props.volumeNumber} className='button3' >Return to Volume</a>
 
-                            </div>
-                            <div>
-                            if(props.chapterImages){<img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer" onClick={() => {
-                                    if (count != props.chapterImages.length - 1) {
-                                        setCount(count + 1)
-                                    }
-                                }}></img>}
-                            </div>
+                    </div>
                 </div>
                 {/* Buttons for page changes */}
                 {/* I need to change this to links somehow to stop page refreshes */}
-                
+
             </div>
 
         );
