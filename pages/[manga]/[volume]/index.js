@@ -5,7 +5,6 @@ function Volume(props) {
     if (props.chapterList) {
         return <Fragment>
             <Header />
-            {console.log(props.volumeImage)}
             <div className="flex flex-col justify-center mx-auto my-6">
                 {/* <img src={props.volumeImage} className="max-h-80 sm:w-full object-center self-end object-cover h-48 sm:h-60 w-full sm:object-contain md:h-80 lg:max-h-96 lg:object-cover xl:object-contain 2xl:object-contain bg-isesuma-darkpurple "></img> */}
                 <div className="flex-box justify-center bg-isesuma-darkpurple">
