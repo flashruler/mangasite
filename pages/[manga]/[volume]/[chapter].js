@@ -20,11 +20,18 @@ function Chapter(props) {
                 <Header />
                 <div className="flex flex-col">
                     <div className="flex justify-center">
-                        <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer" onClick={() => {
-                            if (count != props.chapterImages.length - 1) {
-                                setCount(count + 1)
-                            }
-                        }}></img>
+                        <div>
+                            <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer z-0" onClick={() => {
+                                if (count != props.chapterImages.length - 1) {
+                                    setCount(count + 1)
+                                }
+                                if (count === props.chapterImages.length - 1 && props.chapterNum != props.chapters[props.chapters.length - 1].chapterNumber) {
+                                    return(<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
+
+                                }
+                            }}></img>
+                        </div>
+
                     </div>
                     <div className="flex flex-row justify-center my-3">
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 2xl text-white font-light no-underline align-middle self-center" onClick={() => {
@@ -57,8 +64,6 @@ function Chapter(props) {
 
                     </div>
                 </div>
-                {/* Buttons for page changes */}
-                {/* I need to change this to links somehow to stop page refreshes */}
 
             </div>
 
@@ -114,7 +119,9 @@ export async function getStaticProps({ params }) {
                         props: {
                             chapterImages: chapterImages,
                             volumeNumber: volume,
-                            manga: manga
+                            manga: manga,
+                            chapters: data[volumeIndex].chapters,
+                            chapterNum: data[volumeIndex].chapters[i].chapterNumber
                         }
                     };
                 }
