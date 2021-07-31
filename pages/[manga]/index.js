@@ -36,7 +36,6 @@ export async function getStaticPaths() {
     let data = {}
     let mangaList = await import("../../public/mangas.json");
     if(mangaList && data){
-        console.log(mangaList)
         mangaList = mangaList.mangas
         for (let i = 0; i < mangaList[i].length; i++) {
             data[mangaList[i].mangaName] = await import("../../public/" + mangaList[i].mangaName + ".json");

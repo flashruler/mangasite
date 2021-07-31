@@ -2,11 +2,17 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 import Header from '../../../components/Header';
 function Volume(props) {
-    console.log(props)
     if (props.chapterList) {
         return <Fragment>
             <Header />
-            <h1 className="text-5xl my-4 text-white bg-transparent font-extralight text-center uppercase sm:text-4xl md:text-5xl lg:text-left lg:mx-4">{props.manga + " Volume " + props.volume}</h1>
+            {console.log(props.volumeImage)}
+            <div className="flex flex-col justify-center mx-auto my-6">
+                {/* <img src={props.volumeImage} className="max-h-80 sm:w-full object-center self-end object-cover h-48 sm:h-60 w-full sm:object-contain md:h-80 lg:max-h-96 lg:object-cover xl:object-contain 2xl:object-contain bg-isesuma-darkpurple "></img> */}
+                <div className="flex-box justify-center bg-isesuma-darkpurple">
+                    <h1 className="text-5xl my-1 text-white bg-transparent font-extralight text-center uppercase sm:text-4xl md:text-5xl lg:text-center lg:mx-4">{props.manga + " Volume " + props.volume}</h1>
+                    <h4 className="text-sm text-white bg-transparent mx-4 lg:text-base"></h4>
+                </div>
+            </div>
             <ul className=" justify-center mx-4 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-gap-3 2xl:grid-cols-8 xl:grid-cols-6">
                 <li>
                     <div className="opacity-50 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><Link href={"/"+props.manga}><span><svg xmlns="http://www.w3.org/2000/svg" className="h-40 w-40 mx-auto" fill="none" viewBox="0 0 24 24" stroke="white"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M11 17l-5-5m0 0l5-5m-5 5h12" /></svg>
@@ -67,6 +73,7 @@ export async function getStaticProps({ params }) {
             return {
                 props: {
                     chapterList: chapterList,
+                    volumeImage: data[volumeIndex].cover,
                     volume: volume,
                     manga: manga
                 }

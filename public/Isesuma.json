@@ -6,7 +6,7 @@
             "chapters": [
                 {
                     "chapterNumber": 1,
-                    "chapterCover":"https://i.imgur.com/3exEMWJ.png",
+                    "chapterCover":"https://i.imgur.com/gnZPGXq.png",
                     "images" : [
                         "https://i.imgur.com/YwsuSql.jpg",
                         "https://i.imgur.com/0DMiZsY.jpg",
@@ -46,7 +46,7 @@
                 },
                 {
                     "chapterNumber": 2,
-                    "chapterCover":"https://i.imgur.com/3exEMWJ.png",
+                    "chapterCover":"https://i.imgur.com/7kiVSo6.png",
                     "images" : [
                         "https://i.imgur.com/in1oiAj.png",
                         "https://i.imgur.com/G3xd43A.png",
@@ -95,7 +95,7 @@
                 },
                 {
                     "chapterNumber": 3,
-                    "chapterCover":"https://i.imgur.com/3exEMWJ.png",
+                    "chapterCover":"https://i.imgur.com/jeMBEXi.png",
                     "images" : [
                         "https://i.imgur.com/BVadOl0.png",
                         "https://i.imgur.com/MoGQ7M4.png",
@@ -143,6 +143,28 @@
                         "https://i.imgur.com/xuPkc3L.png",
                         "https://i.imgur.com/asLkTRG.png",
                         "https://i.imgur.com/NDQUPVK.jpg"
+                    ]
+                },
+                {
+                    "chapterNumber": 4,
+                    "chapterCover":"https://i.imgur.com/UxmIqxI.png",
+                    "images" : [
+                        "https://i.imgur.com/63ixFcw.png",
+                        "https://i.imgur.com/3tF47zh.png",
+                        "https://i.imgur.com/4ityyXx.png",
+                        "https://i.imgur.com/WlouCWv.png",
+                        "https://i.imgur.com/cjuLqS4.png",
+                        "https://i.imgur.com/DS2Aehd.png",
+                        "https://i.imgur.com/D4zCk5I.png",
+                        "https://i.imgur.com/RLXMBLa.png",
+                        "https://i.imgur.com/SYI5L8C.png",
+                        "https://i.imgur.com/a1x8ZRP.png",
+                        "https://i.imgur.com/XmVwiRj.png",
+                        "https://i.imgur.com/OHXvWbs.png",
+                        "https://i.imgur.com/32kWfLU.png",
+                        "https://i.imgur.com/STFYGTY.png",
+                        "https://i.imgur.com/4fKMw77.png",
+                        "https://i.imgur.com/Ec9LNz0.jpg"
                     ]
                 }
             ]
