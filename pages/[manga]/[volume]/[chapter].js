@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import Header from '../../../components/Header';
 
+
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
-
     React.useEffect(() => {
         const parsedCount = Number(localStorage.getItem("count") || 0)
         setCount(parsedCount)
@@ -14,6 +14,9 @@ function Chapter(props) {
     React.useEffect(() => {
         localStorage.setItem("count", count)
     }, [count])
+
+    const [page,setPage] = React.useState(1);
+
     if (props.chapterImages) {
         return (
             <div>
@@ -23,12 +26,12 @@ function Chapter(props) {
                     <div className="flex justify-center">
                         <div>
                             <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer z-0" onClick={() => {
-                                if (count != props.chapterImages.length - 1) {
+                                if (count < props.chapterImages.length - 1) {
                                     setCount(count + 1)
-                                    window.scrollTo(0,0)
+                                    window.scrollTo(0, 0)
                                 }
                                 if (count === props.chapterImages.length - 1 && props.chapterNum != props.chapters[props.chapters.length - 1].chapterNumber) {
-                                    return(<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
+                                    return (<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
 
                                 }
                             }}></img>
@@ -36,6 +39,7 @@ function Chapter(props) {
 
                     </div>
                     <div className="flex flex-row justify-center my-3">
+
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 2xl text-white font-light no-underline align-middle self-center" onClick={() => {
                             if (count != 0) {
                                 setCount(0)
@@ -46,7 +50,7 @@ function Chapter(props) {
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 self-center 2xl text-white font-light no-underline align-middle" onClick={() => {
                             if (count != 0) {
                                 setCount(count - 1)
-                                window.scrollTo(0,0)
+                                window.scrollTo(0, 0)
                             }
                         }}>
                             <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"<---"}</h1>
@@ -54,21 +58,21 @@ function Chapter(props) {
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 self-center 2xl text-white font-light no-underline align-middle " onClick={() => {
                             if (count != props.chapterImages.length - 1) {
                                 setCount(count + 1)
-                                window.scrollTo(0,0)
+                                window.scrollTo(0, 0)
                             }
                         }}>
                             <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"--->"}</h1>
                         </a>
                         <a>
-                            <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle" onClick={() =>{
+                            <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle" onClick={() => {
                                 console.log("yes")
-                                if(count==props.chapterImages.length-1){
+                                if (count == props.chapterImages.length - 1) {
                                     setCount(0)
                                     console.log("test")
                                 }
                             }}>
                                 <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3"> Return </h1>
-                                
+
                             </span></Link>
                         </a>
 

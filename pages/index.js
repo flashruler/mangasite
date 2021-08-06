@@ -7,9 +7,12 @@ function HomePage(props) {
 
         <div>
             <Header />
+            <div className="flex flex-row justify-center mx-auto my-6 rounded-3xl sm:flex-row md:h-80 lg:bg-isesuma-purple z-0">
+                <img src={props.mangaList[0].banner} className=" z-0 max-h-80 w-full object-center object-cover bg-isesuma-darkpurple "></img>
+            </div>
             <div className="flex-box justify-items-start">
-                <div className='title'>
-                    <h1 className="5xl my-4">Featured Manga</h1>
+                <div>
+                    <h1 className="text-4xl my-4 font-light text-white">Featured Manga</h1>
                 </div>
                 <Fragment>
                     <ul className="grid gap-4 grid-cols-3 justify-items-start">

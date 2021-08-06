@@ -350,17 +350,64 @@
             "cover":"https://i.ibb.co/9nMhzSb/Isesuma-Manga-V3.jpg",
             "chapters": [
                 {
-                    "chapterNumber": 1,
+                    "chapterNumber": 10,
+                    "chapterCover":"https://i.imgur.com/vuLCFvn.png",
                     "images" : [
+                        "https://i.imgur.com/59l5B8L.png",
+                        "https://i.imgur.com/KIPxWYp.png",
+                        "https://i.imgur.com/XL8r3Ss.png",
+                        "https://i.imgur.com/sBlHUzP.png",
+                        "https://i.imgur.com/3Dyp1yK.png",
+                        "https://i.imgur.com/Wn3NkUv.png",
+                        "https://i.imgur.com/ZZdUZ5e.png",
+                        "https://i.imgur.com/MFTbX9y.png",
+                        "https://i.imgur.com/rjYMIdJ.png",
+                        "https://i.imgur.com/6fwR1ad.png",
+                        "https://i.imgur.com/hgvImq6.png",
+                        "https://i.imgur.com/rnpQzaT.png",
+                        "https://i.imgur.com/P30o4iZ.png",
+                        "https://i.imgur.com/9GRxsKj.png",
+                        "https://i.imgur.com/0vse8de.png",
+                        "https://i.imgur.com/v7LmCDd.png",
+                        "https://i.imgur.com/PxwrDqN.png",
+                        "https://i.imgur.com/EzVstMv.png",
+                        "https://i.imgur.com/IKiWMc6.png",
+                        "https://i.imgur.com/JapJLOx.png",
+                        "https://i.imgur.com/txgsDe8.png",
+                        "https://i.imgur.com/Y5rMgQN.png",
+                        "https://i.imgur.com/vgKsEwa.png",
+                        "https://i.imgur.com/cCVFwHk.png",
+                        "https://i.imgur.com/6OR7XIS.png",
+                        "https://i.imgur.com/2qcOmUG.png",
+                        "https://i.imgur.com/Xv50XtA.png"
                     ]
                 },
                 {
-                    "chapterNumber": 2,
+                    "chapterNumber": 11,
+                    "chapterCover":"https://i.imgur.com/p1Q8LE0.png",
                     "images" : [
+                        "https://i.imgur.com/Bh2rvGD.png",
+                        "https://i.imgur.com/EQXkeTa.png",
+                        "https://i.imgur.com/aLZ7mCz.png",
+                        "https://i.imgur.com/ckFG2nC.png",
+                        "https://i.imgur.com/sB0sb92.png",
+                        "https://i.imgur.com/fSVe1EY.png",
+                        "https://i.imgur.com/JPovtiD.png",
+                        "https://i.imgur.com/V8xYTJO.png",
+                        "https://i.imgur.com/F8YpcnB.png",
+                        "https://i.imgur.com/zbX4bWH.png",
+                        "https://i.imgur.com/nWpYadP.png",
+                        "https://i.imgur.com/FvIeB7b.png",
+                        "https://i.imgur.com/NVG5onQ.png",
+                        "https://i.imgur.com/PQerlwl.png",
+                        "https://i.imgur.com/q052oTD.png",
+                        "https://i.imgur.com/5S0s0Mb.png",
+                        "https://i.imgur.com/8ZRZppV.png",
+                        "https://i.imgur.com/ulsozd6.png"
                     ]
                 },
                 {
-                    "chapterNumber": 3,
+                    "chapterNumber": 12,
                     "images" : [
                     ]
                 }
