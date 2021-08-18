@@ -9,7 +9,7 @@ function Header() {
                         <li><Link href='/'><a className="text-lg no-underline text-white uppercase font-light mx-3">Home</a></Link></li>
                         <li><Link href='/aboutus'><a className="text-lg no-underline text-white uppercase font-light mx-3">About Us</a></Link></li>
                         <li><Link href='/faq'><a className="text-lg no-underline text-white uppercase font-light mx-3">FAQ</a></Link></li>
-                        <li><Link href='#'><a className="text-lg no-underline text-white uppercase font-light mx-3">Donate</a></Link></li>
+                        {/* <li><Link href='#'><a className="text-lg no-underline text-white uppercase font-light mx-3">Donate</a></Link></li> */}
                     </ul>
             </nav>
                 
