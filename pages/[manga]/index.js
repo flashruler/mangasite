@@ -11,6 +11,7 @@ function Manga(props) {
                 <div className="flex-box justify-center bg-isesuma-darkpurple max-h-80 overflow-auto sm:max-h-60 md:max-h-80 lg:h-96">
                     <h1 className="text-5xl my-1 text-white bg-transparent font-extralight text-center uppercase sm:text-4xl md:text-5xl lg:text-left lg:mx-4">{props.manga}</h1>
                     <h4 className="text-sm text-white bg-transparent mx-4 lg:text-base">{props.description}</h4>
+                    <h4 className="text-sm text-white bg-transparent mx-4 lg:text-base my-2">Translators: {props.tn}</h4>
                     <ul className=" flex flex-row bg-transparent justify-center sm:my-3 lg:justify-start lg:mx-4">
                         <li className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.amazon}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Amazon  </h3></span></Link></li>
                         <li className="bg-isesuma-darkblue rounded-md cursor-pointer mx-1 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><Link href={props.bookwalker}><span><h3 className="2xl text-white mx-1 font-light bg-transparent">  Bookwalker  </h3></span></Link></li>
@@ -61,14 +62,14 @@ export async function getStaticProps({ params }) {
         let amazon = ""
         let bookwalker = ""
         let banner=""
-        let tn=""
+        let translators=""
         for (let x = 0; x < mangaL.length; x++) {
             if (mangaL[x].mangaName === manga) {
                 description = mangaL[x].description
                 amazon = mangaL[x].amazon
                 bookwalker = mangaL[x].bookwalker
                 banner = mangaL[x].banner
-                tn = mangaL[x].tn
+                translators = mangaL[x].translators
             }
         }
         data = data.volumes
@@ -89,7 +90,7 @@ export async function getStaticProps({ params }) {
                     amazon: amazon,
                     bookwalker: bookwalker,
                     banner:banner,
-                    tn:tn
+                    tn:translators
                 }
             };
         }
