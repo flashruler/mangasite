@@ -6,6 +6,7 @@ import Header from '../../../components/Header';
 
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
+    const album = {};
     React.useEffect(() => {
         const parsedCount = Number(localStorage.getItem("count") || 0)
         setCount(parsedCount)
@@ -14,32 +15,17 @@ function Chapter(props) {
     React.useEffect(() => {
         localStorage.setItem("count", count)
     }, [count])
+    let newarr = []
 
-    const [page,setPage] = React.useState(1);
 
     if (props.chapterImages) {
         return (
             <div>
                 <Header />
-                <div className="flex flex-col">
-                    {/* <h1 className="text-white text-xl font-extralight uppercase text-center my-5 mx-6"> Currently the reader has a bug where you have to press Back to Start after finishing a chapter. It will be fixed in update 1.1</h1> */}
-                    <div className="flex justify-center">
-                        <div>
-                            <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer z-0" onClick={() => {
-                                if (count < props.chapterImages.length - 1) {
-                                    setCount(count + 1)
-                                    window.scrollTo(0, 0)
-                                }
-                                if (count === props.chapterImages.length - 1 && props.chapterNum != props.chapters[props.chapters.length - 1].chapterNumber) {
-                                    return (<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
-
-                                }
-                            }}></img>
-                        </div>
-
-                    </div>
-                    <div className="flex flex-row justify-center my-3">
-
+                {/* Reader Controls */}
+                <div className="z-20 fixed mx-2 bottom-0 flex flex-col my-2 h-100% w-100% bg-gray-500 rounded-md items-start bg-opacity-75">
+                    <h1 className="text-xl text-white font-light no-underline align-middle self-center bg-transparent my-2">Reader Controls</h1>
+                    <div className="flex flex-row justify-center my-3 bg-transparent opacity-100">
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 2xl text-white font-light no-underline align-middle self-center" onClick={() => {
                             if (count != 0) {
                                 setCount(0)
@@ -53,7 +39,7 @@ function Chapter(props) {
                                 window.scrollTo(0, 0)
                             }
                         }}>
-                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"<---"}</h1>
+                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"<"}</h1>
                         </a>
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 self-center 2xl text-white font-light no-underline align-middle " onClick={() => {
                             if (count != props.chapterImages.length - 1) {
@@ -61,21 +47,44 @@ function Chapter(props) {
                                 window.scrollTo(0, 0)
                             }
                         }}>
-                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {"--->"}</h1>
+                            <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3" > {">"}</h1>
                         </a>
-                        <a>
-                            <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle" onClick={() => {
+                        <a className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle">
+                            <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="bg-isesuma-darkblue rounded-md" onClick={() => {
                                 console.log("yes")
                                 if (count == props.chapterImages.length - 1) {
                                     setCount(0)
-                                    console.log("test")
                                 }
                             }}>
                                 <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3"> Return </h1>
 
                             </span></Link>
                         </a>
+                    </div>
 
+                </div>
+                {/* Viewer */}
+                <div className="flex flex-col">
+                    {/* <h1 className="text-white text-xl font-extralight uppercase text-center my-5 mx-6"> Currently the reader has a bug where you have to press Back to Start after finishing a chapter. It will be fixed in update 1.1</h1> */}
+                    <div className="flex justify-center">
+                        <div className="relative">
+                        <div className="absolute inset-y-0 right-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
+                                if (count < props.chapterImages.length - 1) {
+                                    setCount(count + 1)
+                                    window.scrollTo(0, 0)
+                                }}}></div>
+                        <div className="absolute inset-y-0 left-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
+                                if (count > 0) {
+                                    setCount(count - 1)
+                                    window.scrollTo(0, 0)
+                                }}}></div>
+                            <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer z-0" onClick={() => {
+                                if (count === props.chapterImages.length - 1 && props.chapterNum != props.chapters[props.chapters.length - 1].chapterNumber) {
+                                    return (<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
+
+                                }
+                            }}></img>
+                        </div>
 
                     </div>
                 </div>
@@ -84,7 +93,7 @@ function Chapter(props) {
 
         );
     }
-    return (null)
+    return null;
 }
 export async function getStaticPaths() {
 
@@ -114,6 +123,7 @@ export async function getStaticProps({ params }) {
     let c = params.chapter;
     let volume = params.volume;
     let manga = params.manga;
+
     c = Number(c.replace("c", ""));
     volume = Number(volume.replace("volume", ""));
     if (manga) {
@@ -129,14 +139,26 @@ export async function getStaticProps({ params }) {
             }
             for (let i = 0; i < data[volumeIndex].chapters.length; i++) {
                 if (data[volumeIndex].chapters[i].chapterNumber === c) {
-                    chapterImages = data[volumeIndex].chapters[i].images;
+                    // console.log(data[volumeIndex].chapters[i].albumLink)
+                    const res = await fetch("https://api.imgur.com/3" + data[volumeIndex].chapters[i].albumLink, {
+                        method: 'GET', // or 'PUT'
+                        headers: {
+                            'Authorization': 'Client-ID 991550286979565',
+                        },
+                    })
+                    const dataChapterImages = await res.json()
+                    let chapterImages = []
+                    console.log(dataChapterImages.data[0].link)
+                    for (let k = 0; k < dataChapterImages.data.length; k++) {
+                        chapterImages.push(dataChapterImages.data[k].link)
+                    }
                     return {
                         props: {
                             chapterImages: chapterImages,
                             volumeNumber: volume,
                             manga: manga,
                             chapters: data[volumeIndex].chapters,
-                            chapterNum: data[volumeIndex].chapters[i].chapterNumber
+                            chapterNum: data[volumeIndex].chapters[i].chapterNumber,
                         }
                     };
                 }

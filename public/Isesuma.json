@@ -7,6 +7,7 @@
                 {
                     "chapterNumber": 1,
                     "chapterCover":"https://i.imgur.com/gnZPGXq.png",
+                    "albumLink":"/album/UDuUNRt/images",
                     "images" : [
                         "https://i.imgur.com/YwsuSql.jpg",
                         "https://i.imgur.com/0DMiZsY.jpg",
@@ -47,6 +48,7 @@
                 {
                     "chapterNumber": 2,
                     "chapterCover":"https://i.imgur.com/7kiVSo6.png",
+                    "albumLink":"/album/LgvQ5o9/images",
                     "images" : [
                         "https://i.imgur.com/in1oiAj.png",
                         "https://i.imgur.com/G3xd43A.png",
@@ -96,6 +98,7 @@
                 {
                     "chapterNumber": 3,
                     "chapterCover":"https://i.imgur.com/jeMBEXi.png",
+                    "albumLink":"/album/hJzOGSv/images",
                     "images" : [
                         "https://i.imgur.com/BVadOl0.png",
                         "https://i.imgur.com/MoGQ7M4.png",
@@ -148,6 +151,7 @@
                 {
                     "chapterNumber": 4,
                     "chapterCover":"https://i.imgur.com/UxmIqxI.png",
+                    "albumLink":"/album/arbmMzH/images",
                     "images" : [
                         "https://i.imgur.com/63ixFcw.png",
                         "https://i.imgur.com/3tF47zh.png",
@@ -176,6 +180,7 @@
                 {
                     "chapterNumber": 5,
                     "chapterCover":"https://i.imgur.com/5u5pbdd.png",
+                    "albumLink":"/album/PVEb0rW/images",
                     "images" : [
                         "https://i.imgur.com/zEqJ0P3.png",
                         "https://i.imgur.com/kUAsZB8.png",
@@ -207,6 +212,7 @@
                 {
                     "chapterNumber": 6,
                     "chapterCover":"https://i.imgur.com/Lrmq3Lk.png",
+                    "albumLink":"/album/UdgfuMh/images",
                     "images" : [
                         "https://i.imgur.com/Yw2WOvu.png",
                         "https://i.imgur.com/HiggCJa.png",
@@ -244,6 +250,7 @@
                 {
                     "chapterNumber": 7,
                     "chapterCover":"https://i.imgur.com/bHM7c9A.png",
+                    "albumLink":"/album/aZjHSko/images",
                     "images" : [
                         "https://i.imgur.com/oPO8NiH.png",
                         "https://i.imgur.com/r15MBc2.png",
@@ -278,6 +285,7 @@
                 {
                     "chapterNumber": 8,
                     "chapterCover":"https://i.imgur.com/pC7cxd4.png",
+                    "albumLink":"/album/6PUiLZ7/images",
                     "images" : [
                         "https://i.imgur.com/jRwN4pS.png",
                         "https://i.imgur.com/fN1ccEJ.png",
@@ -315,6 +323,7 @@
                 {
                     "chapterNumber": 9,
                     "chapterCover":"https://i.imgur.com/5NguM2x.png",
+                    "albumLink":"/album/SlKkYPA/images",
                     "images" : [
                         "https://i.imgur.com/AWGUxqI.png",
                         "https://i.imgur.com/WxitGCk.png",
@@ -352,6 +361,7 @@
                 {
                     "chapterNumber": 10,
                     "chapterCover":"https://i.imgur.com/vuLCFvn.png",
+                    "albumLink":"/album/9WSaact/images",
                     "images" : [
                         "https://i.imgur.com/59l5B8L.png",
                         "https://i.imgur.com/KIPxWYp.png",
@@ -385,6 +395,7 @@
                 {
                     "chapterNumber": 11,
                     "chapterCover":"https://i.imgur.com/p1Q8LE0.png",
+                    "albumLink":"/album/Q9BYGFd/images",
                     "images" : [
                         "https://i.imgur.com/Bh2rvGD.png",
                         "https://i.imgur.com/EQXkeTa.png",
@@ -408,6 +419,22 @@
                 },
                 {
                     "chapterNumber": 12,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/l5ZD4pt/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 13,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/q7ORx7C/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 14,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/q7ORx7C/images",
                     "images" : [
                     ]
                 }
@@ -418,17 +445,37 @@
             "cover":"https://i.ibb.co/XZd67W9/Isesuma-Manga-V4.jpg",
             "chapters": [
                 {
-                    "chapterNumber": 1,
+                    "chapterNumber": 15,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/GkM5ACP/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 2,
+                    "chapterNumber": 16,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/VVfHHaC/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 3,
+                    "chapterNumber": 17,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/M1o4iwC/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 18,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/6gDw46V/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 19,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/Vgv686S/images",
                     "images" : [
                     ]
                 }
@@ -439,17 +486,37 @@
             "cover":"https://i.ibb.co/zS4kbRH/Isesuma-Manga-V5.jpg",
             "chapters": [
                 {
-                    "chapterNumber": 1,
+                    "chapterNumber": 20,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/vnxJich/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 2,
+                    "chapterNumber": 21,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/7xD1Xv5/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 3,
+                    "chapterNumber": 22,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/Vvq9tKp/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 23,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/wazAA8J/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 24,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/KazblKT/images",
                     "images" : [
                     ]
                 }
@@ -460,17 +527,44 @@
             "cover":"https://i.ibb.co/f2WNwr2/Isesuma-Manga-V6.jpg",
             "chapters": [
                 {
-                    "chapterNumber": 1,
+                    "chapterNumber": 25,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/0fQgi3E/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 2,
+                    "chapterNumber": 26,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/pSfZNuO/images",
                     "images" : [
                     ]
                 },
                 {
-                    "chapterNumber": 3,
+                    "chapterNumber": 27,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/TfmLlAL/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 28,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/4QOkWmk/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 29,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/UOEpENC/images",
+                    "images" : [
+                    ]
+                },
+                {
+                    "chapterNumber": 30,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/TdLzukD/images",
                     "images" : [
                     ]
                 }
@@ -649,6 +743,32 @@
                 {
                     "chapterNumber": 57,
                     "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "images" : [
+                        "https://i.imgur.com/nM14A6b.jpg",
+                        "https://i.imgur.com/qeGzR05.jpg",
+                        "https://i.imgur.com/NORzCDL.jpg",
+                        "https://i.imgur.com/jqqlm94.jpg",
+                        "https://i.imgur.com/Ju2Uo0h.jpg",
+                        "https://i.imgur.com/cJee4nr.jpg",
+                        "https://i.imgur.com/NIB91RR.jpg",
+                        "https://i.imgur.com/NVRpyAa.jpg",
+                        "https://i.imgur.com/8Aniyiz.jpg",
+                        "https://i.imgur.com/liYRwTR.jpg",
+                        "https://i.imgur.com/lQKPYwx.jpg",
+                        "https://i.imgur.com/3Br1O9C.jpg",
+                        "https://i.imgur.com/wRzD3i6.jpg",
+                        "https://i.imgur.com/bjMY9Ph.jpg",
+                        "https://i.imgur.com/pH3i04S.jpg",
+                        "https://i.imgur.com/4ZJVGjA.jpg",
+                        "https://i.imgur.com/M0HrU54.jpg",
+                        "https://i.imgur.com/APpwke0.jpg",
+                        "https://i.imgur.com/TmEuv65.png"
+                    ]
+                },
+                {
+                    "chapterNumber": 58,
+                    "chapterCover":"https://i.imgur.com/OufWhll.png",
+                    "albumLink":"/album/mDVvSaM/images",
                     "images" : [
                         "https://i.imgur.com/nM14A6b.jpg",
                         "https://i.imgur.com/qeGzR05.jpg",
