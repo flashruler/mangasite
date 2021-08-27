@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+
 import React, { useState } from "react";
 import Link from 'next/link';
 import Header from '../../../components/Header';
@@ -6,7 +6,6 @@ import Header from '../../../components/Header';
 
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
-    const album = {};
     React.useEffect(() => {
         const parsedCount = Number(localStorage.getItem("count") || 0)
         setCount(parsedCount)
@@ -51,7 +50,6 @@ function Chapter(props) {
                         </a>
                         <a className="flex flex-row bg-isesuma-darkblue rounded-md cursor-pointer self-center 2xl mx-2 text-white font-light no-underline align-middle">
                             <Link href={"/" + props.manga + "/volume" + props.volumeNumber} ><span className="bg-isesuma-darkblue rounded-md" onClick={() => {
-                                console.log("yes")
                                 if (count == props.chapterImages.length - 1) {
                                     setCount(0)
                                 }
@@ -68,16 +66,18 @@ function Chapter(props) {
                     {/* <h1 className="text-white text-xl font-extralight uppercase text-center my-5 mx-6"> Currently the reader has a bug where you have to press Back to Start after finishing a chapter. It will be fixed in update 1.1</h1> */}
                     <div className="flex justify-center">
                         <div className="relative">
-                        <div className="absolute inset-y-0 right-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
+                            <div className="absolute inset-y-0 right-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
                                 if (count < props.chapterImages.length - 1) {
                                     setCount(count + 1)
                                     window.scrollTo(0, 0)
-                                }}}></div>
-                        <div className="absolute inset-y-0 left-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
+                                }
+                            }}></div>
+                            <div className="absolute inset-y-0 left-0 bg-opacity-0 bg-gray-700 w-2/4 z-10" onClick={() => {
                                 if (count > 0) {
                                     setCount(count - 1)
                                     window.scrollTo(0, 0)
-                                }}}></div>
+                                }
+                            }}></div>
                             <img src={props.chapterImages[count]} className="h-auto w-auto cursor-pointer z-0" onClick={() => {
                                 if (count === props.chapterImages.length - 1 && props.chapterNum != props.chapters[props.chapters.length - 1].chapterNumber) {
                                     return (<Link href={"/" + props.manga + "/volume" + props.volume + "/" + props.chapterNum + 1}></Link>);
@@ -95,6 +95,7 @@ function Chapter(props) {
     }
     return null;
 }
+//function to create dynamic paths for NextJS
 export async function getStaticPaths() {
 
     let data = {}
@@ -118,6 +119,7 @@ export async function getStaticPaths() {
     return { paths: paths, fallback: true }
 }
 
+// function to pull data from JSON and put intop props
 export async function getStaticProps({ params }) {
 
     let c = params.chapter;
@@ -148,7 +150,6 @@ export async function getStaticProps({ params }) {
                     })
                     const dataChapterImages = await res.json()
                     let chapterImages = []
-                    console.log(dataChapterImages.data[0].link)
                     for (let k = 0; k < dataChapterImages.data.length; k++) {
                         chapterImages.push(dataChapterImages.data[k].link)
                     }
