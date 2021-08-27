@@ -63,6 +63,7 @@ function Chapter(props) {
                 </div>
                 {/* Viewer */}
                 <div className="flex flex-col">
+                <h1 className="justify-center my-3 2xl text-white font-light no-underline align-middle self-center">Please excuse the bugs on the current reader, we are doing our best to update!</h1>
                     {/* <h1 className="text-white text-xl font-extralight uppercase text-center my-5 mx-6"> Currently the reader has a bug where you have to press Back to Start after finishing a chapter. It will be fixed in update 1.1</h1> */}
                     <div className="flex justify-center">
                         <div className="relative">
