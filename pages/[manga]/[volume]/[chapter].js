@@ -6,6 +6,7 @@ import Header from '../../../components/Header';
 
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
+    const [controlsVisible, setControlsVisible] = React.useState(true)
     React.useEffect(() => {
         const parsedCount = Number(localStorage.getItem("count") || 0)
         setCount(parsedCount)
@@ -14,7 +15,6 @@ function Chapter(props) {
     React.useEffect(() => {
         localStorage.setItem("count", count)
     }, [count])
-    let newarr = []
 
 
     if (props.chapterImages) {
@@ -22,8 +22,10 @@ function Chapter(props) {
             <div>
                 <Header />
                 {/* Reader Controls */}
-                <div className="z-20 fixed mx-2 bottom-0 flex flex-col my-2 h-100% w-100% bg-gray-500 rounded-md items-start bg-opacity-75">
+                {/* <div className="z-20 fixed mx-2 bottom-0 flex flex-col my-2 h-100% w-100% bg-gray-500 rounded-md items-start bg-opacity-75">*/}
+                <div className={"z-20 fixed mx-2 bottom-0 flex flex-col my-2 h-100% w-100% bg-gray-500 rounded-md items-start bg-opacity-75 " + (controlsVisible ? "" : "transition duration-500 ease-in-out invisible")}>
                     <h1 className="text-xl text-white font-light no-underline align-middle self-center bg-transparent my-2">Reader Controls</h1>
+
                     <div className="flex flex-row justify-center my-3 bg-transparent opacity-100">
                         <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 2xl text-white font-light no-underline align-middle self-center" onClick={() => {
                             if (count != 0) {
@@ -63,7 +65,10 @@ function Chapter(props) {
                 </div>
                 {/* Viewer */}
                 <div className="flex flex-col">
-                <h1 className="justify-center my-3 2xl text-white font-light no-underline align-middle self-center">Please excuse the bugs on the current reader, we are doing our best to update!</h1>
+                    <h1 className="justify-center my-2 2xl text-white font-light no-underline align-middle self-center">Please excuse the bugs on the current reader, we are doing our best to update!</h1>
+                    <a className="bg-isesuma-darkblue rounded-md cursor-pointer mx-2 my-2 self-center 2xl text-white font-light no-underline align-middle " onClick={() => setControlsVisible(!controlsVisible)}>
+                    <h1 className="text-white font-light no-underline align-middle bg-transparent py-3 px-3"> Toggle Reader Controls </h1>
+                        </a>
                     {/* <h1 className="text-white text-xl font-extralight uppercase text-center my-5 mx-6"> Currently the reader has a bug where you have to press Back to Start after finishing a chapter. It will be fixed in update 1.1</h1> */}
                     <div className="flex justify-center">
                         <div className="relative">
