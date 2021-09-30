@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '../../../components/Header';
 import { useHotkeys } from 'react-hotkeys-hook';
 import React, { useState } from 'react';
+import helmet from 'react-helmet';
 
 
 function Chapter(props) {
@@ -22,7 +23,14 @@ function Chapter(props) {
         }
 
         return (
+
             <div>
+                <title>Read the latest chapter of Isesuma!</title>
+                <meta content={"read" + props.chapterNum} property="og:title" />
+                <meta content="Site Description" property="og:description" />
+                <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
+                <meta content={props.chapterImages[0]} property="og:image" />
+                <meta content="#43B581" data-react-helmet="true" name="theme-color" />
                 <Header />
                 {/* Reader Controls */}
                 {/* <div className="z-20 fixed mx-2 bottom-0 flex flex-col my-2 h-100% w-100% bg-gray-500 rounded-md items-start bg-opacity-75">*/}
