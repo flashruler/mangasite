@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Header from '../../../components/Header';
 import { useHotkeys } from 'react-hotkeys-hook';
+import React, { useState } from 'react';
 
 
 function Chapter(props) {
