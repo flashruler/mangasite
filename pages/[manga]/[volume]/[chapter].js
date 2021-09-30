@@ -1,5 +1,4 @@
 
-import React, { useState } from "react";
 import Link from 'next/link';
 import Header from '../../../components/Header';
 import { useHotkeys } from 'react-hotkeys-hook';
@@ -8,15 +7,6 @@ import { useHotkeys } from 'react-hotkeys-hook';
 function Chapter(props) {
     const [count, setCount] = React.useState(0)
     const [controlsVisible, setControlsVisible] = React.useState(true)
-    const [pageEnd, setPageEnd] = React.useState(0)
-    // React.useEffect(() => {
-    //     const parsedCount = Number(localStorage.getItem("count") || 0)
-    //     setCount(parsedCount)
-    // }, [])
-
-    // React.useEffect(() => {
-    //     localStorage.setItem("count", count)
-    // }, [count])
     useHotkeys('right', () => {
         setCount(count => count + 1)
     });
