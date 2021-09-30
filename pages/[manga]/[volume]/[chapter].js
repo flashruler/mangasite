@@ -26,8 +26,8 @@ function Chapter(props) {
 
             <div>
                 <title>Read the latest chapter of Isesuma!</title>
-                <meta content={"read " + props.chapterNum + "of In Another World with my Smartphone now!"} property="og:title" />
-                <meta content={props.description} property="og:description" />
+                <meta content={"read chapter " + props.chapterNum + " of In Another World with my Smartphone now!"} property="og:title" />
+                <meta content={console.log(props.description)} property="og:description" />
                 <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
                 <meta content={props.chapterImages[0]} property="og:image" />
                 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
@@ -147,6 +147,7 @@ export async function getStaticProps({ params }) {
     volume = Number(volume.replace("volume", ""));
     if (manga) {
         let data = await import("../../../public/" + manga + ".json");
+        let desc = data.description
         data = data.volumes
         if (data) {
             let volumeIndex = -1;
@@ -177,7 +178,7 @@ export async function getStaticProps({ params }) {
                             manga: manga,
                             chapters: data[volumeIndex].chapters,
                             chapterNum: data[volumeIndex].chapters[i].chapterNumber,
-                            description: manga.description
+                            description: desc
                         }
                     };
                 }
