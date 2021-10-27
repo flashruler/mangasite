@@ -29,7 +29,7 @@ function Chapter(props) {
                 <meta content={"read chapter " + props.chapterNum + " of In Another World with my Smartphone now!"} property="og:title" />
                 <meta content={props.description} property="og:description" />
                 <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
-                <meta content={props.chapterImages[0]} property="og:image" />
+                <meta content={props.chapterCover} property="og:image" />
                 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
                 <Header />
                 {/* Reader Controls */}
@@ -178,7 +178,8 @@ export async function getStaticProps({ params }) {
                             manga: manga,
                             chapters: data[volumeIndex].chapters,
                             chapterNum: data[volumeIndex].chapters[i].chapterNumber,
-                            description: desc
+                            description: desc,
+                            chapterCover: data[volumeIndex].chapters[i].chapterCover
                         }
                     };
                 }
