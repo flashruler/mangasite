@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Header from '../../../components/Header';
 import { useHotkeys } from 'react-hotkeys-hook';
-import React, { useState } from 'react';
+import React from 'react';
 import helmet from 'react-helmet';
 
 
