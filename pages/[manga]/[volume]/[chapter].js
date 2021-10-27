@@ -11,8 +11,11 @@ function Chapter(props) {
     const [controlsVisible, setControlsVisible] = React.useState(true)
     useHotkeys('right', () => {
         setCount(count => count + 1)
+        window.scrollTo(0, 0)
     });
-    useHotkeys('left', () => { setCount(count => count - 1) });
+    useHotkeys('left', () => { setCount(count => count - 1) 
+        window.scrollTo(0, 0)
+    });
 
     if (props.chapterImages) {
         if (count === props.chapterImages.length) {
