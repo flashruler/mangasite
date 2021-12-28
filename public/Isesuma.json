@@ -3,7 +3,7 @@
     "volumes": [
         {
             "volumeNumber": 11,
-            "cover":"https://i.ibb.co/bbpb1Vv/Isesuma-Manga-V11.png",
+            "cover":"t_700x780.jpg",
             "chapters": [
                 {
                     "chapterNumber": 54,
@@ -120,6 +120,18 @@
                     "chapterNumber": 61,
                     "chapterCover":"https://i.imgur.com/9HFFP0N.jpg",
                     "albumLink":"/album/9ri5rHL/images"
+                }
+
+            ]
+        },
+        {
+            "volumeNumber": 12,
+            "cover":"t_700x780.jpg",
+            "chapters": [
+                {
+                    "chapterNumber": 62,
+                    "chapterCover":"https://i.imgur.com/m5ikYhq.jpg",
+                    "albumLink":"/album/AUe5tgN/images"
                 }
             ]
         }
