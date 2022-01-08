@@ -12,14 +12,14 @@ function HomePage(props) {
             </div>
             <div className="flex-box justify-items-start">
                 <div>
-                    <h1 className="text-4xl my-4 font-light text-white">Featured Manga</h1>
+                    <h1 className="text-3xl my-4 font-light text-white">Featured Manga</h1>
                 </div>
                 <Fragment>
                     <ul className="grid gap-4 grid-cols-3 justify-items-start">
                         <div className="inline-flex">
                             {props.mangaList.map(manga =>
                                 <li key={manga.mangaName}>
-                                    <Link href={"/" + manga.mangaName}><span><img src={manga.mangaCover} className="max-h-96 w-auto rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"></img></span></Link>
+                                    <Link href={"/" + manga.mangaName}><span><img src={manga.mangaCover} className=" mx-2 max-h-96 w-auto rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"></img></span></Link>
                                 </li>)}
                         </div>
                     </ul>
